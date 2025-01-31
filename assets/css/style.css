@@ -9,6 +9,9 @@ body {
   height: 100%;
   background-color: #f4f4f4;
 }
+.removeHide{
+  display: flex !important;
+}
 .title-hero,
 h1 {
   font-family: "Montserrat", serif;
@@ -61,14 +64,25 @@ header a {
   text-decoration: none;
 }
 h1 {
-  width: 30%;
+  /* width: 30%; */
   font-size: 1.5em;
   font-weight: normal;
 }
 nav {
-  width: 70%;
+  /* width: 70%; */
   display: flex;
   justify-content: end;
+}
+.burgerMenu{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  .burgerMenu__line{
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+  }
 }
 nav ul {
   display: flex;
@@ -133,13 +147,14 @@ div.list-tutos {
   width: 80%;
 }
 .list {
-  display: grid;
+  display: flex;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
 }
 article {
+  flex: 0 0 30%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  height: 40vh;
+  height: 60vh;
   border-radius: 5px;
   background-color: #fff;
 }
@@ -214,4 +229,137 @@ form#contact-form {
 }
 .form-control textarea {
   height: 100%;
+}
+#accesibility{
+  padding: 70px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .accesibility__container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2{
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 481px){
+  .tutos{
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.filters{
+    width: 100%;
+  }
+  div.list-tutos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #filters-form{
+    flex-direction: row !important;  
+    gap: 10px !important;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  article{
+    flex: 0 0 45%;
+    height: auto;
+  }
+  .content{
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .footer-content{
+    flex-direction: column;
+    .footer-left{
+      width: 100%;
+    }
+    .footer-right{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  h1{
+    flex: 1;
+  }
+  header{
+    padding: 25px;
+    align-items: flex-start;
+    height: 105px;
+  }
+  nav{
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+  }
+  .burgerMenu{
+    display: flex;
+    align-items: end;
+  }
+  nav ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    align-items: end;
+  }
+  .tutos{
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.filters{
+    width: 100%;
+  }
+  div.list-tutos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #filters-form{
+    flex-direction: row !important;  
+    gap: 10px !important;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  article{
+    flex: 0 0 100%;
+    height: auto;
+  }
+  .content{
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .footer-content{
+    flex-direction: column;
+    .footer-left{
+      width: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .footer-right{
+      width: 100%;
+    }
+  }
+  #accesibility{
+    padding: 105px 20px 20px 20px;
+  }
 }

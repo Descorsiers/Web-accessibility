@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilité</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header" role="banner">
+        <h1>Tech'n'Tips by La Manu</h1>
+        <nav>
+          <div class="burgerMenu" role="button">
+            <span class="burgerMenu__line"></span>
+            <span class="burgerMenu__line"></span>
+            <span class="burgerMenu__line"></span>
+          </div>
+          <ul class="navbar__list">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#tutoriels">Tutoriels</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="pages/accesibilité.html">Accesibilité</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <section id="accesibility">
+            <div class="accesibility__container">
+                <h2>
+                    Accesibilité
+                </h2>
+                <p>
+                    A La Manu, nous nous engageons à rendre notre site accessible à tous, y compris aux personnes en situation de handicap. 
+                    Nous nous efforçons d'améliorer continuellement l'expérience utilisateur en respectant les normes d'accessibilité numérique.
+                </p>
+            </div>
+            <div class="accesibility__container">
+                <h2>
+                    Conformité aux normes
+                </h2>
+                <p>
+                    Nous suivons les recommandations des Web Content Accessibility Guidelines (WCAG) 2.1, niveau AA, 
+                    afin d'assurer une navigation fluide et accessible à tous les utilisateurs, quel que soit leur dispositif ou technologie d'assistance.
+                </p>
+            </div>
+            <div class="accesibility__container">
+                <h2>
+                    Fonctionnalités d'accessibilité
+                </h2>
+                <ul>
+                    <li>
+                        Une navigation simplifiée au clavier
+                    </li>
+                    <li>
+                        Une compatibilité avec les lecteurs d'écran
+                    </li>
+                    <li>
+                        Un contraste optimisé pour une meilleure lisibilité
+                    </li>
+                    <li>
+                        Une taille de police ajustable
+                    </li>
+                    <li>
+                        Des alternatives textuelles pour les images et contenus multimédias
+                    </li>
+                </ul>
+            </div>
+            <div class="accesibility__container">
+                <h2>
+                    Assistance et contact
+                </h2>
+                <p>
+                    Si vous rencontrez des difficultés d'accès ou avez des suggestions d'amélioration, 
+                    n'hésitez pas à nous contacter à l'adresse suivante : [adresse e-mail de contact].
+                </p>
+                <p>
+                    Nous nous engageons à traiter vos demandes dans les meilleurs délais afin d'améliorer 
+                    continuellement notre site et de garantir une accessibilité optimale pour tous.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content" id="contact">
+          <div class="footer-left">
+            <img src="../assets/img/logo-la-manu.png" alt="Logo de LaManu"/>
+            <h3>Menu :</h3>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#tutoriels">Tutoriels</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <h3 id="contact">Contact :</h3>
+            <form action="" id="contact-form" aria-labelledby="contact">
+              <div class="form-group">
+                <div class="form-control">
+                  <label for="email">Email :</label>
+                  <input type="email" placeholder="Votre Email" aria-required="true" id="email" name="email" />
+                </div>
+                <div class="form-control">
+                  <label for="messageObject">Objet :</label>
+                  <input type="text" placeholder="Votre objet" aria-required="true" id="messageObject" name="messageObject" />
+                </div>
+              </div>
+              <div class="form-group form-control">
+                <label for="your-message">Message :</label>
+                <textarea name="your-message" id="your-message" placeholder="Message ..."></textarea>
+              </div>
+              <div class="form-full-width">
+                <input type="radio" required aria-required="true" aria-checked="false" id="terms-of-use"/>
+                <label for="terms-of-use">J'accepte les conditions d'utilisation</label>
+              </div>
+              <button type="submit" class="pink-btn">Envoyer</button>
+            </form>
+          </div>
+        </div>
+        <small>Copyright - La Manu 2024</small>
+      </footer>
+</body>
+</html>

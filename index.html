@@ -6,15 +6,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Tech'n'Tips by La Manu</title>
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body id="accueil">
-    <header>
+    <header class="header" role="banner">
       <h1>Tech'n'Tips by La Manu</h1>
       <nav>
-        <ul>
+        <div class="burgerMenu" role="button">
+          <span class="burgerMenu__line"></span>
+          <span class="burgerMenu__line"></span>
+          <span class="burgerMenu__line"></span>
+        </div>
+        <ul class="navbar__list">
           <li><a href="#accueil">Accueil</a></li>
           <li><a href="#tutoriels">Tutoriels</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="pages/accesibilité.html">Accesibilité</a></li>
         </ul>
       </nav>
     </header>
@@ -32,20 +39,21 @@
       </section>
       <section class="tutos" id="tutoriels">
         <div class="filters">
-          <span>Filtres</span>
+          <span id="filters">Filtres</span>
           <hr />
-          <form action="" method="GET" id="filters-form">
+          <form action="" method="GET" id="filters-form" aria-labelledby="filters">
             <div>
               <input
                 type="checkbox"
                 name="filter"
                 id="front-end"
                 value="front-end"
+                aria-checked="false"
               />
               <label for="front-end">Développement Front </label>
             </div>
             <div>
-              <input type="checkbox" name="filter" id="design" value="design" />
+              <input type="checkbox" name="filter" id="design" value="design" aria-checked="false" />
               <label for="design">Design</label>
             </div>
             <div>
@@ -54,6 +62,7 @@
                 name="filter"
                 id="beginner"
                 value="beginner"
+                aria-checked="false"
               />
               <label for="beginner"> Programmation pour débutant </label>
             </div>
@@ -77,7 +86,7 @@
                     avec des balises sémantiques.
                   </p>
                 </div>
-                <a href="">Lire plus</a>
+                <a href="" aria-label="Lire plus sur le tutoriel HTML de base">Lire plus</a>
               </div>
             </article>
             <article>
@@ -91,7 +100,7 @@
                     Apprenez à styliser vos pages web avec des sélecteurs CSS, des couleurs, et bien plus encore.
                   </p>
                 </div>
-                <a href="">Lire plus</a>
+                <a href="" aria-label="Lire plus sur CSS pour les débutants">Lire plus</a>
               </div>
             </article>
             <article>
@@ -105,7 +114,7 @@
                     Comprenez les bases du JavaScript et apprenez à rendre vos pages interactives.
                   </p>
                 </div>
-                <a href="">Lire plus</a>
+                <a href="" aria-label="Lire plus sur l'introduction au JavaScript">Lire plus</a>
               </div>
             </article>
             <article>
@@ -119,7 +128,7 @@
                     Un guide sur la façon de modifier le Document Object Model (DOM) pour rendre les pages web interactives.
                   </p>
                 </div>
-                <a href="">Lire plus</a>
+                <a href="" aria-label="Lire plus sur manipuler le DOM en JavaScript">Lire plus</a>
               </div>
             </article>
             <article>
@@ -151,25 +160,25 @@
           </ul>
         </div>
         <div class="footer-right">
-          <h3>Contact :</h3>
-          <form action="" id="contact-form">
+          <h3 id="contact">Contact :</h3>
+          <form action="" id="contact-form" aria-labelledby="contact">
             <div class="form-group">
               <div class="form-control">
-                <label for="">Email :</label>
-                <input type="email" placeholder="Votre Email" aria-required="true" />
+                <label for="email">Email :</label>
+                <input type="email" placeholder="Votre Email" aria-required="true" id="email" name="email" />
               </div>
               <div class="form-control">
-                <label for="">Objet :</label>
-                <input type="text" placeholder="Votre objet" aria-required="true" />
+                <label for="messageObject">Objet :</label>
+                <input type="text" placeholder="Votre objet" aria-required="true" id="messageObject" name="messageObject" />
               </div>
             </div>
             <div class="form-group form-control">
-              <label for="">Message :</label>
-              <textarea name="" id="" placeholder="Message ..."></textarea>
+              <label for="your-message">Message :</label>
+              <textarea name="your-message" id="your-message" placeholder="Message ..."></textarea>
             </div>
             <div class="form-full-width">
-              <input type="radio" required aria-required="true" aria-checked="false"/>
-              <label for="">J'accepte les conditions d'utilisation</label>
+              <input type="radio" required aria-required="true" aria-checked="false" id="terms-of-use"/>
+              <label for="terms-of-use">J'accepte les conditions d'utilisation</label>
             </div>
             <button type="submit" class="pink-btn">Envoyer</button>
           </form>
